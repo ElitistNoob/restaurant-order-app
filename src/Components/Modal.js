@@ -7,19 +7,20 @@ import { ModalStyled } from "./Styles/Modal.Styled";
 import MoonLoader from "react-spinners/MoonLoader";
 
 function Modal() {
+  const {
+    setItemsOrdered,
+    setPrice,
+    setIsModalOpen,
+    setIsOrderCompleted,
+    formData,
+    setFormData,
+  } = useContext(Context);
+
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    card: "",
-    cvv: "",
-  });
   const [paymentMessage, setPaymentMessage] = useState("");
 
   const cardFormat = formData.card.slice(0, 16);
   const cvvFormat = formData.cvv.slice(0, 3);
-
-  const { setItemsOrdered, setPrice, setIsModalOpen, setIsOrderCompleted } =
-    useContext(Context);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -83,7 +84,9 @@ function Modal() {
       <h2>Enter card details</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name on card <span>*Required</span></label>
+          <label htmlFor="name">
+            Name on card <span>*Required</span>
+          </label>
           <input
             type="text"
             name="name"
@@ -93,7 +96,9 @@ function Modal() {
             value={formData.name}
             required
           ></input>
-          <label htmlFor="card">Card Number <span>*Required</span></label>
+          <label htmlFor="card">
+            Card Number <span>*Required</span>
+          </label>
           <input
             type="number"
             name="card"
@@ -103,7 +108,9 @@ function Modal() {
             onChange={handleChange}
             required
           ></input>
-          <label htmlFor="CVV">CVV <span>*Required</span></label>
+          <label htmlFor="CVV">
+            CVV <span>*Required</span>
+          </label>
           <input
             type="number"
             name="cvv"

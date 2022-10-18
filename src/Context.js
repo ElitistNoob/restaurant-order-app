@@ -7,6 +7,11 @@ function ContextProvider({ children }) {
   const [price, setPrice] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOrderCompleted, setIsOrderCompleted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    card: "",
+    cvv: "",
+  });
 
   function addToOrder(item) {
     const checkDoubles = itemsOrdered.some(listItem => listItem === item);
@@ -46,6 +51,8 @@ function ContextProvider({ children }) {
         setIsModalOpen,
         isOrderCompleted,
         setIsOrderCompleted,
+        formData,
+        setFormData,
       }}
     >
       {children}

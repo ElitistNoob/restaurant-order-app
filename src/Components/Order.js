@@ -12,6 +12,7 @@ function Order() {
     price,
     completeTransaction,
     isOrderCompleted,
+    formData,
   } = useContext(Context);
 
   const renderOrderedItems = itemsOrdered.map(
@@ -43,7 +44,7 @@ function Order() {
         </>
       ) : (
         <h2 className="end-message">
-          Thanks, Kevin! Your order is on its way!
+          Thanks, {formData.name}! Your order is on its way!
         </h2>
       )}
     </OrderStyled>
