@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/restaurant-order-app/static/js/main.64656462.js",
+    "static/js/787.5e5c6437.chunk.js": "/restaurant-order-app/static/js/787.5e5c6437.chunk.js",
+    "static/media/ferks-guare-KEZdWfYD-ow-unsplash.jpg": "/restaurant-order-app/static/media/ferks-guare-KEZdWfYD-ow-unsplash.f9577b68a85dcadfc2a8.jpg",
+    "static/media/burger.png": "/restaurant-order-app/static/media/burger.50822bc34f4790e6d6f8.png",
+    "static/media/beer.png": "/restaurant-order-app/static/media/beer.755c064cae876cb759a9.png",
+    "index.html": "/restaurant-order-app/index.html",
+    "main.64656462.js.map": "/restaurant-order-app/static/js/main.64656462.js.map",
+    "787.5e5c6437.chunk.js.map": "/restaurant-order-app/static/js/787.5e5c6437.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.64656462.js"
+  ]
+}
